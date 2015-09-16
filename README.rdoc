@@ -1,5 +1,7 @@
 == README
 
+Tech Event Choice: http://www.meetup.com/techinmotionnyc/events/225394836/
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
