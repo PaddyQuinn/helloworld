@@ -30,7 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'mongoid', '~>4.0.2'
+gem 'mongoid'
 gem 'bson_ext'
 
 group :development, :test do
