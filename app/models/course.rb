@@ -4,4 +4,5 @@ class Course
   field :name, type: String
   field :number, type: Integer
   field :teacher, type: String
+  validates :number, :presence => true
 end

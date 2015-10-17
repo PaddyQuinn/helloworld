@@ -1,3 +1,5 @@
+<%= render 'users/header' %>
+
 <%= form_for :session, :url => login_path, :method => :post do |f| %>
 
   <%= f.label "Email address" %>
@@ -9,3 +11,5 @@
   </div>
 
 <% end %>
+
+<%= render 'users/footer' %>

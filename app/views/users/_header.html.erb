@@ -1,0 +1,6 @@
+<% if @current_user.nil? %>
+<div><%= link_to 'login', login_path %></div>
+<div><%= link_to 'sign up', signup_path %></div>
+<% else %>
+<div><%= link_to 'logout', logout_path %></div>
+<% end %>
