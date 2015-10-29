@@ -16,6 +16,13 @@
   <%= @user.email %>
 </p>
 
+<p>
+  <strong>Links:</strong>
+  <% @user.links.split(" ").each do |link| %>
+  <%= link_to link, "http://" + link %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
