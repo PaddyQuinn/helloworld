@@ -1,35 +1,13 @@
 == README
 
-I chose to implement feature options 6 and 9.
-
 Tech Event Choice: http://www.meetup.com/techinmotionnyc/events/225394836/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Mandatory Features: 1, 2, 3
+Optional Features: 6, 9
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
+Description: My application is a repository for short stories that user's write.
+The user can then put his or her short stories in a collection at a public URL so that
+anyone can read his or her short stories. In my schema the list model represents the short
+stories, as I was originally going to go in a different direction with my project.
 
 Ruby on Rails, Fall 2015. Good luck! - chaiwen
