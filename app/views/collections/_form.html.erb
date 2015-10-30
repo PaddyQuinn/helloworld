@@ -1,0 +1,18 @@
+<%= simple_form_for @collection do |f| %>
+  <% if @collection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@collection.errors.count, "error") %> prohibited this collection from being saved:</h2>
+
+      <ul>
+      <% @collection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :name, placeholder: 'Enter Collection Title' %>
+  <%= f.input :desc, placeholder: 'Enter Collection Description' %>
+  <%= f.association :lists, collection: @current_user.lists, as: :check_boxes %>
+  <%= f.button :submit %>
+<% end %>

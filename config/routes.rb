@@ -1,19 +1,29 @@
 Rails.application.routes.draw do
   resources :courses
   resources :schools
+  
   resources :users
-
   get "signup" => "users#new", :as => "signup"
-  get 'login' => 'sessions#new'
-  post "login" => "sessions#create"
-  get "logout" => "sessions#destroy", :as => "logout"
+  get "/users" => "users#index", :as => "index"
   post "/users" => "users#create", :as => "create"
   get "users/:uri" => "users#show", :as => "show"
   match "users/:uri", to: "users#update", via: [:patch, :put], :as => "update" 
   delete "users/:uri" => "users#destroy", :as => "delete"
   get "users/:uri/edit" => "users#edit", :as => "edit"
 
+  resources :sessions
+  get 'login' => 'sessions#new'
+  post "login" => "sessions#create"
+  get "logout" => "sessions#destroy", :as => "logout"
   root 'sessions#new'
+
+  resources :lists
+  post 'newlist' => 'lists#new'
+
+  resources :collections
+  post 'newcollection' => 'collections#new'
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
