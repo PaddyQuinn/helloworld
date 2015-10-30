@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
 
   before_filter :require_user
 
-
   def current_user
     if @current_user.nil?
       puts session[:user_id]

@@ -6,5 +6,8 @@ class User
   field :last_name, type: String
   field :email, type: String
   field :links, type: String
-  validates :email, :presence => { :message => "email address required" }
+  field :uri, type: String
+  validates :email, :presence => { :message => " address required" }
+  validates :uri, :presence => { :message => " required" }
+  validates :uri, :uniqueness => { :message => " taken" }
 end

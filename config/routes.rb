@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post "login" => "sessions#create"
   get "logout" => "sessions#destroy", :as => "logout"
+  post "/users" => "users#create", :as => "create"
+  get "users/:uri" => "users#show", :as => "show"
+  match "users/:uri", to: "users#update", via: [:patch, :put], :as => "update" 
+  delete "users/:uri" => "users#destroy", :as => "delete"
+  get "users/:uri/edit" => "users#edit", :as => "edit"
 
   root 'sessions#new'
   # The priority is based upon order of creation: first created -> highest priority.
